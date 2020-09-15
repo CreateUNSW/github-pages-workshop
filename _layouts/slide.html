@@ -1,43 +1,40 @@
+---
+layout: default
+---
+
 {% assign title = page.title | replace: "_", " " %}
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>{{ title }}</title>
-    </head>
-    <body>
-        <h3>{{ site.title }}</h3>
-        <h1>{{ title }}</h1>
-        <main>
-            {{ content }}
-        </main>
 
-        {% assign next = '' %}
-        {% assign reversed = site.slide_order | reverse %}
-        {% for slide in reversed %}
-            {% if next == page.title %}
-                <a href="{{ site.baseurl }}/slides/{{slide}}"><-</a>
-                {% break %}
-            {% endif %}
-            {% assign next = slide | capitalize %}
-        {% endfor %}
+    {{ content }}
+    {% assign next = '' %}
+    {% assign reversed = site.slide_order | reverse %}
+    {% for slide in reversed %}
+        {% if next == page.title %}
+            <a href="{{ site.baseurl }}/slides/{{slide}}"><-</a>
+            {% break %}
+        {% endif %}
+        {% assign next = slide | capitalize %}
+    {% endfor %}
 
-        {% assign prev = '' %}
+    {% assign prev = '' %}
+    {% for slide in site.slide_order %}
+        {% if prev == page.title %}
+            <a href="{{ site.baseurl }}/slides/{{slide}}">-></a>
+            {% break %}
+        {% endif %}
+        {% assign prev = slide | capitalize %}
+    {% endfor %}
+
+    Skip around:
+    <ul>
         {% for slide in site.slide_order %}
-            {% if prev == page.title %}
-                <a href="{{ site.baseurl }}/slides/{{slide}}">-></a>
-                {% break %}
-            {% endif %}
-            {% assign prev = slide | capitalize %}
+            <li>
+                <a href="{{ site.baseurl }}/slides/{{slide}}">{{slide}}</a>
+            </li>
         {% endfor %}
+    </ul>
 
-        Skip around:
-        <ul>
-            {% for slide in site.slide_order %}
-                <li>
-                    <a href="{{ site.baseurl }}/slides/{{slide}}">{{slide}}</a>
-                </li>
-            {% endfor %}
-        </ul>
-    </body>
+    <p>Check out the code for the slides <a href="https://github.com/CreateUNSW/github-pages-workshop">here</a></p>
 </html>

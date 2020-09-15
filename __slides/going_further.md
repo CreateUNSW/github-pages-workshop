@@ -6,6 +6,7 @@
 * Ruby :(
 * No dynamic sites
 * Jekyll can be restrictive
+* Have to either use CDNs or commit libraries
 
 ## Static sites
 * Hosting
