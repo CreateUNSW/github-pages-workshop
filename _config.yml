@@ -41,6 +41,27 @@ defaults:
     values:
       layout: "slide"
 
+# github runs jekyll 3.9.0, specifying order requires 4.1.0. This is a fine workaround
+slide_order:
+  - outline
+  - introduction
+  - acknowledgement_of_country
+  - about_CREATE
+  - jack
+  - static_sites
+  - github_pages
+  - technologies
+  - html
+  - css
+  - javascript
+  - markdown
+  - sass
+  - jekyll
+  - liquid
+  - advanced_stuff
+  - going_further
+  - resources
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

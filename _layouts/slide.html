@@ -1,13 +1,43 @@
+{% assign title = page.title | replace: "_", " " %}
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{{ page.title }}</title>
+        <title>{{ title }}</title>
     </head>
     <body>
-        <h1>{{ page.title }}</h1>
+        <h3>CREATE Workshop:  Making a personal site using Github Pages</h3>
+        <h1>{{ title }}</h1>
         <main>
             {{ content }}
         </main>
-        <a href="/slides/{{ page.nextSlide }}">-></a>
+
+        {% assign next = '' %}
+        {% assign reversed = site.slide_order | reverse %}
+        {% for slide in reversed %}
+            {% if next == page.title %}
+                <a href="/slides/{{slide}}"><-</a>
+                {% break %}
+            {% endif %}
+            {% assign next = slide | capitalize %}
+        {% endfor %}
+
+        {% assign prev = '' %}
+        {% for slide in site.slide_order %}
+            {% if prev == page.title %}
+                <a href="/slides/{{slide}}">-></a>
+                {% break %}
+            {% endif %}
+            {% assign prev = slide | capitalize %}
+        {% endfor %}
+
+        Skip around:
+        <ul>
+            {% for slide in site.slide_order %}
+                <li>
+                    <a href="/slides/{{slide}}">{{slide}}</a>
+                </li>
+            {% endfor %}
+        </ul>
     </body>
 </html>
