@@ -14,6 +14,7 @@
   * to load
 * Easy to maintain
 * No backend
+* Resilient
 
 ## Disadvantages
 

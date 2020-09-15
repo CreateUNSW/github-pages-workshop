@@ -29,6 +29,10 @@
 * Other generators
   * [11ty](https://www.11ty.dev/)
     * I've been using it for [UNSW iGEM](https://github.com/UNSW-iGEM/wiki-2020)
+    * Supports heaps of template languages
+    * Not super hard to move to from Jekyll
+    * Can use Javascript to define your own liquid filters
+  * Hugo, Gatsby, Wintersmith etc.
 
 ## Dynamic sites
 
@@ -36,8 +40,8 @@
   * AWS, DigitalOcean, Azure etc
   * Many of these services have a student tier that's free or low cost
 * Technologies
-  * Nodejs, python
+  * Nodejs, Python
   * Webpack
-  * React, vue
+  * React, Vue
   * Mysql, Mongodb
 * Check out [CSESOC's workshop](https://www.youtube.com/watch?v=e02tDCwcGdE) on this!
