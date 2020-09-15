@@ -43,7 +43,6 @@ defaults:
 
 # github runs jekyll 3.9.0, specifying order requires 4.1.0. This is a fine workaround
 slide_order:
-  - Outline
   - Introduction
   - Acknowledgement_of_Country
   - About_CREATE
