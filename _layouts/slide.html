@@ -16,7 +16,7 @@
         {% assign reversed = site.slide_order | reverse %}
         {% for slide in reversed %}
             {% if next == page.title %}
-                <a href="/slides/{{slide}}"><-</a>
+                <a href="{{ site.baseurl }}/slides/{{slide}}"><-</a>
                 {% break %}
             {% endif %}
             {% assign next = slide | capitalize %}
@@ -25,7 +25,7 @@
         {% assign prev = '' %}
         {% for slide in site.slide_order %}
             {% if prev == page.title %}
-                <a href="/slides/{{slide}}">-></a>
+                <a href="{{ site.baseurl }}/slides/{{slide}}">-></a>
                 {% break %}
             {% endif %}
             {% assign prev = slide | capitalize %}
@@ -35,7 +35,7 @@
         <ul>
             {% for slide in site.slide_order %}
                 <li>
-                    <a href="/slides/{{slide}}">{{slide}}</a>
+                    <a href="{{ site.baseurl }}/slides/{{slide}}">{{slide}}</a>
                 </li>
             {% endfor %}
         </ul>
