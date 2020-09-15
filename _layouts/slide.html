@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<script src="{{ site.baseurl }}/js/slide.js"></script>
 {% assign title = page.slug | replace: "_", " " %}
 <h1>{{ title }}</h1>
 {{ content }}
@@ -8,7 +9,7 @@ layout: default
 {% assign reversed = site.slide_order | reverse %}
 {% for slide in reversed %}
     {% if next == page.slug %}
-        <a href="{{ site.baseurl }}/slides/{{slide}}"><-</a>
+        <a id="back" href="{{ site.baseurl }}/slides/{{slide}}"><-</a>
         {% break %}
     {% endif %}
     {% assign next = slide %}
@@ -17,7 +18,7 @@ layout: default
 {% assign prev = '' %}
 {% for slide in site.slide_order %}
     {% if prev == page.slug %}
-        <a href="{{ site.baseurl }}/slides/{{slide}}">-></a>
+        <a id="forward" href="{{ site.baseurl }}/slides/{{slide}}">-></a>
         {% break %}
     {% endif %}
     {% assign prev = slide %}
