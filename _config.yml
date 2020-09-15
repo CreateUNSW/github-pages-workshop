@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "CREATE Workshop: Building a personal site using Github Pages"
+title: "CREATE Workshop: Building a Personal Site using Github Pages"
 email: create@createunsw.com.au
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -43,25 +43,32 @@ defaults:
 
 # github runs jekyll 3.9.0, specifying order requires 4.1.0. This is a fine workaround
 slide_order:
-  - outline
-  - introduction
-  - acknowledgement_of_country
-  - about_CREATE
-  - jack
-  - assumed_knowledge
-  - static_sites
-  - github_pages
-  - technologies
-  - html
-  - css
-  - javascript
-  - markdown
-  - sass
-  - jekyll
-  - liquid
-  - advanced_stuff
-  - going_further
-  - resources
+  - Outline
+  - Introduction
+  - Acknowledgement_of_Country
+  - About_CREATE
+  - Jack
+  - Assumed_Knowledge
+  - Static_Sites
+  - Github_Pages
+  - Technologies
+  - HTML
+  - CSS
+  - SASS
+  - Javascript
+  - Setup
+  - Config
+  - Profile
+  - Markdown
+  - Jekyll
+  - Liquid
+  - Layout
+  - Collections
+  - Projects
+  - Blog
+  - Advanced_Stuff
+  - Going_Further
+  - Resources
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

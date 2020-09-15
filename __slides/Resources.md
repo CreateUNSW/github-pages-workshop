@@ -7,3 +7,6 @@
   * Github uses the older v3.9.0 version of Jekyll than the current v4.1.1, so some features don't work
 * [Liquid Docs](https://shopify.github.io/liquid/)
   * Most things work, some liquid features are not supported by jekyll
+* [Kramdown Docs](https://kramdown.gettalong.org/quickref.html)
+  * Specific Markdown docs for the markdown flavour jekyll uses
+* [Github Pages Docs](https://docs.github.com/en/github/working-with-github-pages)

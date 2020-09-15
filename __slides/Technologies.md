@@ -10,3 +10,5 @@ Github Pages supports a bunch of web technologies:
 - **SASS**
 - **Jekyll**
 - **Liquid**
+
+Everything in bold is transformed by Jekyll into one of the non-bold technologies.

@@ -4,7 +4,7 @@ nextSlide: resources
 
 ## What are we doing today?
 
-Building a site that:
+Building a site that
 
 * Has a portfolio page
 * Has a list of your personal projects
