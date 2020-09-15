@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: slide
 title: About
 permalink: /about/
 ---
