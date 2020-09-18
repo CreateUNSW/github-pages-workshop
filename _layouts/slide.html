@@ -6,7 +6,7 @@ layout: default
 <h1>{{ title }}</h1>
 {{ content }}
 {% assign next = '' %}
-{% assign reversed = site.slide_order | reverse %}
+{% assign reversed = site.data.slides | reverse %}
 {% for slide in reversed %}
     {% if next == page.slug %}
         <a id="back" href="{{ site.baseurl }}/slides/{{slide}}"><-</a>
@@ -16,7 +16,7 @@ layout: default
 {% endfor %}
 
 {% assign prev = '' %}
-{% for slide in site.slide_order %}
+{% for slide in site.data.slides %}
     {% if prev == page.slug %}
         <a id="forward" href="{{ site.baseurl }}/slides/{{slide}}">-></a>
         {% break %}
@@ -26,7 +26,7 @@ layout: default
 
 Skip around:
 <ul>
-    {% for slide in site.slide_order %}
+    {% for slide in site.data.slides %}
         <li>
             <a href="{{ site.baseurl }}/slides/{{slide}}">{{slide}}</a>
         </li>

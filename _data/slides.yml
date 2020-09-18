@@ -1,0 +1,26 @@
+# github runs jekyll 3.9.0, specifying order requires 4.1.0. This is a fine workaround.
+- Introduction
+- Acknowledgement_of_Country
+- About_CREATE
+- Jack
+- Assumed_Knowledge
+- Static_Sites
+- Github_Pages
+- Technologies
+- HTML
+- CSS
+- SASS
+- Javascript
+- Setup
+- Config
+- Profile
+- Markdown
+- Jekyll
+- Liquid
+- Layout
+- Collections
+- Projects
+- Blog
+- Advanced_Stuff
+- Going_Further
+- Resources
