@@ -2,35 +2,46 @@
 layout: default
 ---
 <script src="{{ site.baseurl }}/js/slide.js"></script>
-{% assign title = page.slug | replace: "_", " " %}
-<h1>{{ title }}</h1>
-{{ content }}
-{% assign next = '' %}
-{% assign reversed = site.data.slides | reverse %}
-{% for slide in reversed %}
-    {% if next == page.slug %}
-        <a id="back" href="{{ site.baseurl }}/slides/{{slide}}"><-</a>
-        {% break %}
-    {% endif %}
-    {% assign next = slide %}
-{% endfor %}
+<script src="{{ site.baseurl }}/js/menu.js"></script>
+<a id="menu-icon">☰</a>
+<div class="row">
+    <div class="menu">
+        {% include slide-nav.html %}
+    </div>
+    <div class="sidenav" id="slideMenu">
+        <div class="row">
+            <div class="mobile-logo">
+                <img src="{{ site.baseurl }}/images/logos/create-neg.png" alt="Create logo">
+            </div>
+                <a id="closebtn">&times;</a>
+        </div>
+        {% include slide-nav.html %}
+    </div>
+    <div class="main-slide">
+        {% assign title = page.slug | replace: "_", " " %}
+        <h1>{{ title }}</h1>
+        {{ content }}
+        <div class="slide-control">
+            {% assign next = '' %}
+            {% assign reversed = site.data.slides | reverse %}
+            {% for slide in reversed %}
+                {% if next == page.slug %}
+                    <a class="button" id="back" href="{{ site.baseurl }}/slides/{{slide}}"><i class="arrow left"></i></a>
+                    {% break %}
+                {% endif %}
+                {% assign next = slide %}
+            {% endfor %}
+            
+            {% assign prev = '' %}
+            {% for slide in site.data.slides %}
+                {% if prev == page.slug %}
+                    <a class="button" id="forward" href="{{ site.baseurl }}/slides/{{slide}}"><i class="arrow right"></i></a>
+                    {% break %}
+                {% endif %}
+                {% assign prev = slide %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
-{% assign prev = '' %}
-{% for slide in site.data.slides %}
-    {% if prev == page.slug %}
-        <a id="forward" href="{{ site.baseurl }}/slides/{{slide}}">-></a>
-        {% break %}
-    {% endif %}
-    {% assign prev = slide %}
-{% endfor %}
 
-Skip around:
-<ul>
-    {% for slide in site.data.slides %}
-        <li>
-            <a href="{{ site.baseurl }}/slides/{{slide}}">{{slide}}</a>
-        </li>
-    {% endfor %}
-</ul>
-
-<p>Check out the code for the slides <a href="https://github.com/CreateUNSW/github-pages-workshop">here</a></p>

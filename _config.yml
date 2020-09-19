@@ -15,19 +15,20 @@
 # in the templates via {{ site.myvariable }}.
 title: "CREATE Workshop: Building a Personal Site using Github Pages"
 email: create@createunsw.com.au
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/github-pages-workshop" # the subpath of your site, e.g. /blog
+description: Welcome to CREATE Workshop on building your very own personal website using Github Pages.
+baseurl: /github-pages-workshop
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+
+favicon: /images/logos/favicon.png
+
+main_website: https://www.createunsw.com.au
+facebook_username: createunsw
+youtube_link: https://www.youtube.com/channel/UCUo89qrPI3aoLo5bWTiPfZQ
 
 # Build settings
 markdown: kramdown
-plugins:
-  - jekyll-feed
+# plugins:
+#   - jekyll-feed
 
 collections:
   _slides:

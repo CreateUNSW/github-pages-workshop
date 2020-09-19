@@ -1,14 +1,307 @@
 ---
 ---
+////////////////
+// Variables //
+//////////////
 
-main img {
-    width: 50%;
+// CREATE Colour Palette
+$create-red: #d42128;
+$create-brown: #5d4037;
+$create-yellow: #f9bf2c;
+$create-orange: #ffa000;
+$create-blue: #283593;
+$create-dark-blue: #1a237e;
+$create-black: #212121;
+$create-white: #ffffff;
+
+// Site Palette
+$site-grey: #dbdbdb;
+$site-dark-grey: #999999;
+$site-alert: #f8d3d4;
+
+// Numerical Variables
+$side-menu: 500px;
+$desktop-width: 100%;
+$mobile-width: auto;
+$min-height: 80vh;
+$min-height-mobile: 70vh;
+$img-size: 45%;
+
+
+//////////////
+// General //
+////////////
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    margin: 0px auto;
+}
+
+a {
+    color: $create-blue;
+    font-weight: bold;
+}
+
+// header
+header {
+    background-color: rgba($create-black, 0.1);
 }
 
 #logos {
-    width: 100%;
-    display: auto-flow dense / 0.5fr 0.5fr;
+    width: $side-menu;
     img {
-        width: 30%;
+        height: 65px;
+        padding: 20px 15px;
+    }
+}
+
+.site-title {
+    padding: 20px;
+    width: $desktop-width;
+}
+
+// footer
+footer {
+    padding: 15px 0px;
+    text-align: center;
+    background-color: rgba($create-black, 0.1);
+}
+
+.button {
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: $create-red;
+    color: $create-white;
+    font-weight: normal;
+    text-decoration: none;
+    &:hover {
+        background-color: darken($create-red, 10%);
+    }
+}
+
+///////////////////
+// Row Settings //
+/////////////////
+
+.row {
+    display: flex;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+}
+
+///////////////////
+// Welcome Page //
+/////////////////
+
+.homepage {
+    min-height: $min-height;
+    text-align: center;
+    @media (max-width: 991.98px) {
+        min-height: $min-height-mobile;
+    }
+    // large button (applied css button)
+    .large {
+        font-size: x-large;
+    }
+}
+
+///////////////////////
+// Slide Navigation //
+/////////////////////
+
+// menu for desktop
+// sidenav when screen size is smaller than 991.98px
+
+.menu {
+    width: $side-menu;
+}
+
+.menu,
+.sidenav {
+    background-color: $create-blue;
+    ul {
+        -webkit-font-smoothing: antialiased;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        li {
+            text-decoration: none;
+            color: $create-white;
+            position: relative;
+            &:hover {
+                color: $create-white;
+                background: darken($create-dark-blue, 5%);
+            }
+        }
+    }
+    .link {
+        padding: 6.5px 20px;
+        text-decoration: none;
+        color: $create-white;
+        font-weight: normal;
+        display: block;
+        transition: 0.3s;
+    }
+}
+
+// custom color for source code option
+.source-code {
+    background-color: $create-yellow;
+    color: $create-black!important;
+    &:hover {
+        background-color: darken($create-yellow, 10%);
+    }
+}
+
+// when the current slide is on the current page
+.active {
+    background-color: $create-red!important;
+}
+
+#menu-icon,
+.sidenav {
+    display: none;
+}
+
+///////////////////
+// Slide Design //
+/////////////////
+
+.main-slide {
+    width: $desktop-width;
+    position: relative;
+    min-height: $min-height;
+    padding: 0px 20px;
+    img {
+        width: $img-size;
+    }
+}
+
+.slide-control {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    // arrow symbols
+    .arrow {
+        border: solid $create-white;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+    } 
+      .right {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    } 
+      .left {
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+    }
+}
+
+//////////////////////////////////
+// Responsive Design on Mobile //
+////////////////////////////////
+
+// when screen size is smaller than 991.98px
+@media (max-width: 991.98px) {
+    // general setting mobile
+    .row {
+        display: block;
+    }
+
+    // header mobile
+    #logos {
+        width: auto;
+        img {
+            margin: auto;
+            height: 40px;
+        }
+    }
+    .site-title {
+        width: $mobile-width!important;
+        padding: 0px 15px;
+        text-align: center;
+    }
+
+    // mobile slide menu
+    .menu { //hide the desktop left menu
+        display: none;
+    }
+    #menu-icon {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        margin: 0px 10px;
+        font-size: 30px;
+        font-weight: 500;
+        cursor: pointer;
+        color: $create-black;
+        &:hover{
+            color: $create-blue;
+        }
+    }
+    .sidenav { //show the mobile menu
+        display: block;
+        min-height: 100%;
+        width: 0px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        transition: 0.35s;
+        overflow-y: auto;
+        .mobile-logo {
+            width: 50%;
+            img { // create logo
+                height: 40px;
+                padding: 20px 15px;
+            }
+        }
+        ul {
+            columns: 300px 2;
+        }
+        .link {
+            font-size: larger;
+            padding: 15px 20px;
+        }
+    }
+    #closebtn {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        font-size: 60px;
+        color: $create-white;
+        cursor: pointer;
+        -webkit-user-select: none;  /* Chrome all / Safari all */
+        -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+        user-select: none;
+        &:hover {
+            color: $create-yellow;
+        }
+    }
+
+    // slide design mobile
+    .main-slide {
+        width: $mobile-width!important;
+        min-height: $min-height-mobile!important;
+    }
+
+    .slide-control {
+        display: block;
+        position: relative;
+        margin: 40px auto;
+        text-align: center;
+        top: 0;
+        right: 0;
     }
 }
