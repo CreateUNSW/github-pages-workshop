@@ -8,6 +8,8 @@
 * Jekyll can be restrictive
 * Have to either use CDNs or commit libraries
 
+COLUMN
+
 ## Static sites
 * Hosting
   * [Gitlab pages](https://about.gitlab.com/stages-devops-lifecycle/pages/) -
@@ -30,6 +32,8 @@
     * Not super hard to move to from Jekyll
     * Can use Javascript to define your own liquid filters
   * Hugo, Gatsby, Wintersmith etc.
+
+COLUMN
 
 ## Dynamic sites
 
