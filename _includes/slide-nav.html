@@ -1,0 +1,16 @@
+<ul>
+    {% assign title = page.slug | replace: "_", " " %}
+    {% for slides in site.data.slides %}
+    {% assign slide = slides | replace: "_", " " %}
+        <li>
+            {% if title == slide %}
+            <a class="link active" href="{{ site.baseurl }}/slides/{{slide | replace: " ", "_"}}">{{ slide }}</a>
+            {% else %}
+            <a class="link" href="{{ site.baseurl }}/slides/{{slide | replace: " ", "_"}}">{{ slide }}</a>
+            {% endif %}
+        </li>
+    {% endfor %}
+        <li>
+            <a class="link source-code" href="https://github.com/CreateUNSW/github-pages-workshop" target="_blank">Workshop Slides Source Code</a>
+        </li>
+</ul>
