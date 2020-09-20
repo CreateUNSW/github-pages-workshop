@@ -1,11 +1,10 @@
 ---
 ---
 
-## Limitations of Github Pages
+## Limitations of Github Pages and Jekyll
 
-* Ruby :(
 * No dynamic sites
-* Jekyll can be restrictive
+* Jekyll can be restrictive and requires ruby
 * Have to either use CDNs or commit libraries
 
 COLUMN
