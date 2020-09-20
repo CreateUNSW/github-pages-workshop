@@ -22,9 +22,6 @@
     * could do custom processing using something like webpack
     * publish using Continous Integration
 
-* Jekyll stuff we didn't talk about:
-  * Data files, can be YAML, JSON, or CSV
-
 
 * Other generators
   * [11ty](https://www.11ty.dev/)
