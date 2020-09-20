@@ -35,6 +35,6 @@ COLUMN
 ## Examples
 
 * [CREATE Website](https://createunsw.com.au)
-* [Tsz Kin William Liu's Portfolio](https://liutkwilliam.github.io/)
+* [William Tsz Kin Liu's Portfolio](https://liutkwilliam.github.io/)
 * [Octoprint](https://octoprint.org/)
 * [The slides you're looking at right now!](https://github.com/CreateUNSW/github-pages-workshop)

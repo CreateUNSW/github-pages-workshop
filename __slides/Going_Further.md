@@ -7,6 +7,11 @@
 * Jekyll can be restrictive and requires ruby
 * Have to either use CDNs or commit libraries
 
+## Courses
+
+* COMP1531 - teaches backend web development using Python and Flask
+* COMP6080 - new course that covers Javascript, CSS, React, UI Design
+
 COLUMN
 
 ## Static sites
