@@ -1,3 +1,6 @@
+<!-- This layout lets you have multiple columns, seperated by the "COLUMN" keyword.
+    See Static_Slides.md for an example -->
+
 ---
 layout: default
 ---
@@ -20,7 +23,16 @@ layout: default
     <div class="main-slide">
         {% assign title = page.slug | replace: "_", " " %}
         <h1>{{ title }}</h1>
-        {{ content }}
+        {% assign columns = content | split: "COLUMN" %}
+        <div class="row">
+            {% for column in columns %}
+                <div class="slide-column col">
+                    {{ column }}
+                </div>
+            {% endfor %}
+
+        </div>
+        <!-- {{ content }} -->
         <div class="slide-control">
             {% assign next = '' %}
             {% assign reversed = site.data.slides | reverse %}
@@ -31,7 +43,7 @@ layout: default
                 {% endif %}
                 {% assign next = slide %}
             {% endfor %}
-            
+
             {% assign prev = '' %}
             {% for slide in site.data.slides %}
                 {% if prev == page.slug %}
@@ -43,5 +55,3 @@ layout: default
         </div>
     </div>
 </div>
-
-

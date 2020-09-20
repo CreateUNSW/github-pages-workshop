@@ -23,6 +23,8 @@
 * No database
 * No authentication or access management
 
+COLUMN
+
 ## Who are they for?
 
 * You
