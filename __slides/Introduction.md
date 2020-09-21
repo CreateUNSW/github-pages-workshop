@@ -1,14 +1,16 @@
 ---
-nextSlide: resources
 ---
 
 ## What are we doing today?
 
-Building a site that
+### Building a website with:
 
-* Has a portfolio page
-* Has a list of your personal projects
-* Has a blog
-* Is easy to maintain
-* Looks great
-* Is hosted for free
+* a portfolio page
+* a list of your personal projects
+* a blog
+
+### And is
+
+* easy to maintain
+* looks great
+* hosted for free
