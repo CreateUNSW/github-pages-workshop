@@ -1,12 +1,18 @@
 ---
 ---
 
-## Limitations of Github Pages
+## Limitations of Github Pages and Jekyll
 
-* Ruby :(
 * No dynamic sites
-* Jekyll can be restrictive
+* Jekyll can be restrictive and requires ruby
 * Have to either use CDNs or commit libraries
+
+## Courses
+
+* COMP1531 - teaches backend web development using Python and Flask
+* COMP6080 - new course that covers Javascript, CSS, React, UI Design
+
+COLUMN
 
 ## Static sites
 * Hosting
@@ -22,9 +28,6 @@
     * could do custom processing using something like webpack
     * publish using Continous Integration
 
-* Jekyll stuff we didn't talk about:
-  * Data files, can be YAML, JSON, or CSV
-
 
 * Other generators
   * [11ty](https://www.11ty.dev/)
@@ -33,6 +36,8 @@
     * Not super hard to move to from Jekyll
     * Can use Javascript to define your own liquid filters
   * Hugo, Gatsby, Wintersmith etc.
+
+COLUMN
 
 ## Dynamic sites
 
