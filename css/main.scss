@@ -25,7 +25,7 @@ $desktop-width: 100%;
 $mobile-width: auto;
 $min-height: 80vh;
 $min-height-mobile: 70vh;
-$img-size: 45%;
+$img-size: 40%;
 
 
 //////////////
@@ -50,9 +50,13 @@ header {
 
 #logos {
     width: $side-menu;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
     img {
         height: 65px;
-        padding: 20px 15px;
+        padding: 20.5px 15px;
     }
 }
 
@@ -63,22 +67,31 @@ header {
 
 // footer
 footer {
-    padding: 15px 0px;
+    padding: 10px 0px;
     text-align: center;
     background-color: rgba($create-black, 0.1);
 }
 
+// buttons
 .button {
     margin: 5px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 10px;
     background-color: $create-red;
     color: $create-white;
     font-weight: normal;
     text-decoration: none;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
     &:hover {
         background-color: darken($create-red, 10%);
     }
+}
+
+.large {
+    font-size: x-large;
 }
 
 ///////////////////
@@ -92,31 +105,49 @@ footer {
         display: table;
         clear: both;
     }
+}
 
+/////////////////////
+// center content //
+///////////////////
+
+.blank-page-center { // center horizontally and vertically
+    min-height: $min-height;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @media (max-width: 991.98px) {
+        min-height: $min-height-mobile;
+    }
+    .center-content {
+        min-height: 350px;
+        text-align: center;
+    }
 }
 
 ///////////////////
 // Welcome Page //
 /////////////////
 
-.homepage {
-    min-height: $min-height;
-    text-align: center;
-    @media (max-width: 991.98px) {
-        min-height: $min-height-mobile;
+#homepage {
+    img {
+        width: 300px;
     }
-    // large button (applied css button)
-    .large {
-        font-size: x-large;
+    a {
+        @extend .button;
+        @extend .large; 
     }
 }
+
 
 ///////////////////////
 // Slide Navigation //
 /////////////////////
 
 // menu for desktop
-// sidenav when screen size is smaller than 991.98px
+// side navigation when screen size is smaller than 991.98px
 
 .menu {
     width: $side-menu;
@@ -125,6 +156,10 @@ footer {
 .menu,
 .sidenav {
     background-color: $create-blue;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
     ul {
         -webkit-font-smoothing: antialiased;
         list-style: none;
@@ -165,6 +200,7 @@ footer {
     background-color: $create-red!important;
 }
 
+// not showing unless screen size is smaller than 991.98px
 #menu-icon,
 .sidenav {
     display: none;
@@ -184,13 +220,26 @@ footer {
     }
     ul {
         list-style-type: disc;
+        li {
+            padding: 2px 0px;
+        }
     }
 }
 
 .slide-control {
     position: absolute;
-    top: 20px;
+    top: 15px;
     right: 10px;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+    // slide number indicator
+    p {
+        display:inline-block;
+        padding: 0px 10px 0px 0px;
+        
+    }
     // arrow symbols
     .arrow {
         border: solid $create-white;
@@ -252,7 +301,7 @@ footer {
         cursor: pointer;
         color: $create-black;
         &:hover{
-            color: $create-blue;
+            color: $create-red;
         }
     }
     .sidenav { //show the mobile menu
@@ -274,7 +323,7 @@ footer {
             }
         }
         ul {
-            columns: 300px 2;
+            columns: 200px 2;
         }
         .link {
             font-size: larger;
@@ -286,6 +335,7 @@ footer {
         top: 0;
         right: 30px;
         font-size: 60px;
+        font-weight: 400;
         color: $create-white;
         cursor: pointer;
         -webkit-user-select: none;  /* Chrome all / Safari all */
@@ -293,7 +343,7 @@ footer {
         -ms-user-select: none;      /* IE 10+ */
         user-select: none;
         &:hover {
-            color: $create-yellow;
+            color: $create-red;
         }
     }
 
@@ -302,7 +352,9 @@ footer {
         width: $mobile-width!important;
         min-height: $min-height-mobile!important;
     }
-
+    .slide-column {
+        padding: 0 0% 0 0;
+    }
     .slide-control {
         display: block;
         position: relative;
@@ -310,5 +362,9 @@ footer {
         text-align: center;
         top: 0;
         right: 0;
+        p {
+            display: block;
+            padding: 0px 0px 10px 0px;
+        }
     }
 }
