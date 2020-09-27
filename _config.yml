@@ -21,6 +21,10 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 favicon: /images/logos/favicon.png
 
+# logos
+logo-pos: /images/logos/create.png
+logo-neg: /images/logos/create-neg.png
+
 main_website: https://www.createunsw.com.au
 facebook_username: createunsw
 youtube_link: https://www.youtube.com/channel/UCUo89qrPI3aoLo5bWTiPfZQ

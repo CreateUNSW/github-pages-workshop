@@ -8,13 +8,13 @@
         {% assign last = slide %}
         {% assign slideNo = slideNo | plus: 1 %}
     {% endfor %}
-    {{ slideNo }} / {{ site.data.slides.size }}
+    <p>{{ slideNo }} / {{ site.data.slides.size }}</p>
 
     {% assign next = '' %}
     {% assign reversed = site.data.slides | reverse %}
     {% for slide in reversed %}
         {% if next == page.slug %}
-            <a class="button" id="back" href="{{ site.baseurl }}/slides/{{slide}}"><i class="arrow left"></i></a>
+            <a class="button" id="back" href="{{ site.baseurl }}/slides/{{slide}}" title="Previous Slide"><i class="arrow left"></i></a>
             {% break %}
         {% endif %}
         {% assign next = slide %}
@@ -23,10 +23,9 @@
     {% assign prev = '' %}
     {% for slide in site.data.slides %}
         {% if prev == page.slug %}
-            <a class="button" id="forward" href="{{ site.baseurl }}/slides/{{slide}}"><i class="arrow right"></i></a>
+            <a class="button" id="forward" href="{{ site.baseurl }}/slides/{{slide}}" title="Next Slide"><i class="arrow right"></i></a>
             {% break %}
         {% endif %}
         {% assign prev = slide %}
     {% endfor %}
-
 </div>

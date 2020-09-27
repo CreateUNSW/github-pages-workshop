@@ -17,7 +17,7 @@ layout: default
     <div class="sidenav" id="slideMenu">
         <div class="row">
             <div class="mobile-logo">
-                <img src="{{ site.baseurl }}/images/logos/create-neg.png" alt="Create logo">
+                <img src="{{ site.baseurl }}{{ site.logo-neg }}" alt="Create logo">
             </div>
                 <a id="closebtn">&times;</a>
         </div>
@@ -29,7 +29,7 @@ layout: default
         {% assign columns = content | split: "COLUMN" %}
         <div class="row">
             {% for column in columns %}
-                <div class="slide-column col">
+                <div class="slide-column">
                     {{ column }}
                 </div>
             {% endfor %}
