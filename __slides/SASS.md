@@ -19,3 +19,17 @@ selector {
     }
 }
 ```
+
+Also allows for variables:
+
+``` CSS
+$site-yellow: #f9bf2c;
+
+div {
+    background-color: $site-yellow;
+}
+
+p {
+    color: $site-yellow;
+}
+```
