@@ -31,6 +31,7 @@ COLUMN
 * Your Personal Project
 * Your Society
 * Your Friends
+* Organisations, companies, agencies
 
 ## Examples
 
@@ -38,3 +39,4 @@ COLUMN
 * [William Tsz Kin Liu's Portfolio](https://liutkwilliam.github.io/)
 * [Octoprint](https://octoprint.org/)
 * [The slides you're looking at right now!](https://github.com/CreateUNSW/github-pages-workshop)
+* [Also checkout the examples from the Jekyll Showcase](https://jekyllrb.com/showcase/)
