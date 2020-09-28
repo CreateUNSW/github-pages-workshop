@@ -5,7 +5,7 @@
 
 ## Who we are:
 
-* **Build, Learn and Make**
+* **Build, Learn and Inspire**
 * Provide opportunities for students to learn practical skills in engineering, innovation and design
 * Collaborate on shared ideas and projects
 * Everyone can be a maker, regardless of your background and studies
@@ -17,13 +17,13 @@
   * CAD
   * This one (how to build a personal website)
 * Projects
-  * Sumobots (Collaboration with Mechatronics Society) **(Pending)**
 * Outreach (High School and Public Events)
 * Sales Stall
 
 ### Past Projects
 
 * Vivid Sydney Light Installation Projects (Project Illuminate) --> **UNSW Illuminate**
+  * [2019: Celestial Pancake](https://www.createunsw.com.au/projects/pi-celestial-pancake/)
 * Droid Racing Challenge (DRC)
 * Unmanned Aerial Systems (UAS) --> **Flight Labs UNSW**
 * Unmanned ground vehicle

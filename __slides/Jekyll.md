@@ -1,6 +1,10 @@
 ---
 ---
 
+## Preparations
+
+You can only run jekyll after installing Ruby.
+
 ## Commands
 
 `bundle exec jekyll new`
