@@ -13,9 +13,9 @@
 ## What we do:
 
 * Workshops
-  * Arduino
+  * Arduino & Basics of Electronics
   * CAD
-  * This one (how to build a personal website)
+  * This one (how to make a personal website)
 * Projects
 * Outreach (High School and Public Events)
 * Sales Stall
@@ -26,7 +26,7 @@
   * [2019: Celestial Pancake](https://www.createunsw.com.au/projects/pi-celestial-pancake/)
 * Droid Racing Challenge (DRC)
 * Unmanned Aerial Systems (UAS) --> **Flight Labs UNSW**
-* Unmanned ground vehicle
+* Unmanned ground vehicle, also known as "Debbie"
 
 [Check out our student club website]({{site.main_website}})
 

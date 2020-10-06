@@ -4,20 +4,20 @@
 ## William Tsz Kin Liu
 ### B. Media Arts (Hons), UNSW Sydney, 2019
 
-* User Interface (UI) Design
+* User Interface (UI) Design, website development
 
 ## Jack Robbers
 ### 2nd Year, B. Electrical Engineering (Hons) / Computer Science, UNSW Sydney
 
-* Content Design
+* Content Design, website development
 
 COLUMN
 
 ## Watch the recap?
 
-We will share the live-stream to our Official YouTube Channel.
+We will share the live-stream to our Official YouTube Channel. And a link will be provided here in due course.
 
----
+<br>
 
 ## Contact Us
 
@@ -29,4 +29,4 @@ We will share the live-stream to our Official YouTube Channel.
 
 * Website: [https://www.createunsw.com.au/](https://www.createunsw.com.au/)
 
-* Discord:
+* Discord: [https://discord.gg/DEW5vab](https://discord.gg/DEW5vab)
