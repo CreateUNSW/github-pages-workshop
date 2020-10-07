@@ -13,8 +13,5 @@ Lots of content to cover. Basic HTML, CSS, and Javascript has been well covered 
 ### [Ruby](https://www.ruby-lang.org/en/)
 * after installation, jekyll scripting can be used in the working repositories.
 
-### Free Software that can write codes
-
-* [Notepad++](https://notepad-plus-plus.org/)
-* [Microsoft Visual Studio Code](https://code.visualstudio.com/)
-* [Brackets](http://brackets.io/)
+### A text editor of your choice
+* We will be using [Microsoft Visual Studio Code](https://code.visualstudio.com/) for this workshop.

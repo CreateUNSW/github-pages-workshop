@@ -26,7 +26,12 @@ $mobile-width: auto;
 $min-height: 80vh;
 $min-height-mobile: 70vh;
 $img-size: 40%;
+$logo-height: 65px;
+$logo-height-mobile: 40px;
+$padding-top-bottom: 20.5px;
 
+// height for the side Navigation Bar
+$sidenav-height: $padding-top-bottom + $logo-height-mobile + $padding-top-bottom;
 
 //////////////
 // General //
@@ -41,6 +46,10 @@ body {
 a {
     color: $create-blue;
     font-weight: bold;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 // header
@@ -55,14 +64,21 @@ header {
     -ms-user-select: none;      /* IE 10+ */
     user-select: none;          /* Likely future */
     img {
-        height: 65px;
-        padding: 20.5px 15px;
+        height: $logo-height;
+        padding: $padding-top-bottom 15px;
     }
 }
 
 .site-title {
     padding: 20px;
     width: $desktop-width;
+    a {
+        text-decoration: none;
+        color: $create-black;
+        &:hover {
+            color: $create-black;
+        }
+    }
 }
 
 // footer
@@ -277,7 +293,7 @@ footer {
         width: auto;
         img {
             margin: auto;
-            height: 40px;
+            height: $logo-height-mobile;
         }
     }
     .site-title {
@@ -290,7 +306,7 @@ footer {
     .menu { //hide the desktop left menu
         display: none;
     }
-    #menu-icon {
+    .menu-icon {
         display: block;
         position: absolute;
         top: 15px;
@@ -300,17 +316,29 @@ footer {
         font-weight: 500;
         cursor: pointer;
         color: $create-black;
+        &:before {
+            content: '☰';
+        }
         &:hover{
             color: $create-red;
+            text-decoration: none;
         }
     }
-    .sidenav { //show the mobile menu
+    .closebtn {
+        top: 5px;
+        font-size: 50px;
+        &:before {
+            content: '\00d7';
+        }
+    }
+
+    // side navigation
+    .sidenav {
         display: block;
-        min-height: 100%;
+        height: calc(100% - #{$sidenav-height});
         width: 0px;
         position: fixed;
         z-index: 1;
-        top: 0;
         left: 0;
         bottom: 0;
         transition: 0.35s;
@@ -327,24 +355,11 @@ footer {
         }
         .link {
             font-size: larger;
-            padding: 15px 20px;
+            padding: 10px 20px;
         }
     }
-    #closebtn {
-        position: absolute;
-        top: 0;
-        right: 30px;
-        font-size: 60px;
-        font-weight: 400;
-        color: $create-white;
-        cursor: pointer;
-        -webkit-user-select: none;  /* Chrome all / Safari all */
-        -moz-user-select: none;     /* Firefox all */
-        -ms-user-select: none;      /* IE 10+ */
-        user-select: none;
-        &:hover {
-            color: $create-red;
-        }
+    .show-sidenav {
+        width: 100%!important;
     }
 
     // slide design mobile

@@ -9,18 +9,13 @@ layout: default
 
 <script src="{{ site.baseurl }}/js/slide.js"></script>
 <script src="{{ site.baseurl }}/js/menu.js"></script>
-<a id="menu-icon">☰</a>
+<a class="menu-icon" id="menu"></a>
 <div class="row">
     <div class="menu">
         {% include slide-nav.html %}
     </div>
     <div class="sidenav" id="slideMenu">
-        <div class="row">
-            <div class="mobile-logo">
-                <img src="{{ site.baseurl }}{{ site.logo-neg }}" alt="Create logo">
-            </div>
-                <a id="closebtn">&times;</a>
-        </div>
+                <!-- <a id="closebtn"></a> -->
         {% include slide-nav.html %}
     </div>
     <div class="main-slide">

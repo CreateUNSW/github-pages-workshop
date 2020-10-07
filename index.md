@@ -6,7 +6,12 @@ layout: homepage
 
 # Workshop
 
-## Wednesday Week 3 20T3
-## 5 - 7pm, 30th September 2020 (AEST)
+# Making a Personal Site from scratch with Github Pages
+
+## Term 3 Week 5
+## Wednesday 14th October 2020
+## 5pm - 7pm Sydney Time
+
+<br>
 
 [Workshop Slides]({{ site.baseurl }}/slides/Introduction)

@@ -23,7 +23,7 @@ COLUMN
 
 ## Static sites
 * Hosting
-  * [Gitlab pages](https://about.gitlab.com/stages-devops-lifecycle/pages/) -
+  * [Gitlab pages](https://about.gitlab.com/stages-devops-lifecycle/pages/)
     * supports heaps of static site generators
     * doesn't have the ubiquity of Github
   * [Bitbucket cloud](https://support.atlassian.com/bitbucket-cloud/docs/publishing-a-website-on-bitbucket-cloud/)
@@ -38,7 +38,7 @@ COLUMN
 
 * Other generators
   * [11ty](https://www.11ty.dev/)
-    * I've been using it for [UNSW iGEM](https://github.com/UNSW-iGEM/wiki-2020)
+    * Workshop Presenter Jack has been using it for [UNSW iGEM](https://github.com/UNSW-iGEM/wiki-2020)
     * Supports heaps of template languages
     * Not super hard to move to from Jekyll
     * Can use Javascript to define your own liquid filters
