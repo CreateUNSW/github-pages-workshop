@@ -7,10 +7,17 @@
 * Jekyll can be restrictive and requires ruby
 * Have to either use CDNs or commit libraries
 
-## Courses
+## UNSW Courses
+
+### School of Computer Science and Engineering (CSE)
 
 * COMP1531 - teaches backend web development using Python and Flask
 * COMP6080 - new course that covers Javascript, CSS, React, UI Design
+
+### School of Art & Design
+
+* SDES3174 - understand website structure, aesthetics and teaches how to build a basic website with HTML, CSS, Javascript
+* Undergraduate Design Disciplinary Studios - Interaction
 
 COLUMN
 
