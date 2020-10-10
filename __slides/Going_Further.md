@@ -7,21 +7,8 @@
 * Jekyll can be restrictive and requires ruby
 * Have to either use CDNs or commit libraries
 
-## UNSW Courses
-
-### School of Computer Science and Engineering (CSE)
-
-* COMP1531 - teaches backend web development using Python and Flask
-* COMP6080 - new course that covers Javascript, CSS, React, UI Design
-
-### School of Art & Design
-
-* SDES3174 - understand website structure, aesthetics and teaches how to build a basic website with HTML, CSS, Javascript
-* Undergraduate Design Disciplinary Studios - Interaction
-
-COLUMN
-
 ## Static sites
+
 * Hosting
   * [Gitlab pages](https://about.gitlab.com/stages-devops-lifecycle/pages/)
     * supports heaps of static site generators
@@ -57,3 +44,15 @@ COLUMN
   * React, Vue
   * Mysql, Mongodb
 * Check out [CSESOC's workshop](https://www.youtube.com/watch?v=e02tDCwcGdE) on this!
+
+## UNSW Courses
+
+### School of Computer Science and Engineering (CSE)
+
+* COMP1531 - teaches backend web development using Python and Flask
+* COMP6080 - new course that covers Javascript, CSS, React, UI Design
+
+### School of Art & Design
+
+* SDES3174 - understand website structure, aesthetics and teaches how to build a basic website with HTML, CSS, Javascript
+* Undergraduate Design Disciplinary Studios - Interaction

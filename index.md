@@ -1,5 +1,6 @@
 ---
 layout: homepage
+image: /images/workshop-bg.jpg
 ---
 
 ![CREATE Logo]({{site.baseurl}}{{site.logo-pos}})
@@ -11,6 +12,8 @@ layout: homepage
 ## Term 3 Week 5
 ## Wednesday 14th October 2020
 ## 5pm - 7pm Sydney Time
+
+**Send us your questions during the workshop and we will response your questions as soon as we can.**
 
 <br>
 

@@ -20,6 +20,8 @@
 * Outreach (High School and Public Events)
 * Sales Stall
 
+COLUMN
+
 ### Past Projects
 
 * Vivid Sydney Light Installation Projects (Project Illuminate) --> **UNSW Illuminate**

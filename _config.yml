@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "CREATE Workshop: Building a Personal Site using Github Pages"
+title: "CREATE Workshop: Making a Personal Site from scratch with Github Pages"
 email: create@createunsw.com.au
 description: Welcome to CREATE Workshop on building your very own personal website using Github Pages.
 baseurl: /github-pages-workshop
