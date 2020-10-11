@@ -4,8 +4,7 @@ image: /images/workshop-bg.jpg
 ---
 
 ![CREATE Logo]({{site.baseurl}}{{site.logo-pos}})
-
-# Workshop
+![Arc Supported Logo]({{site.baseurl}}/images/logos/arc.png)
 
 # Making a Personal Site from scratch with Github Pages
 
@@ -18,3 +17,7 @@ image: /images/workshop-bg.jpg
 <br>
 
 [Workshop Slides]({{ site.baseurl }}/slides/Introduction)
+
+<br>
+
+© 2020 CREATE NSW Inc.

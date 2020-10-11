@@ -21,7 +21,7 @@ $site-alert: #f8d3d4;
 // display variables
 $desktop-width: 100%;
 $mobile-width: auto;
-$main-min-height: 82vh;
+$main-min-height: 84vh;
 $img-size: 40%;
 
 // menu variables
@@ -108,9 +108,8 @@ header {
 
 // footer
 footer {
-    padding: 10px 5px;
+    padding: 5px 20px;
     font-size: smaller;
-    text-align: center;
     background-color: $create-black;
     color: $create-white;
     a {
@@ -119,13 +118,29 @@ footer {
             color: $create-white;
         }
     }
+    .left-column {
+        text-align: left;
+        float: left;
+        width: 50%;
+    }
+    .right-column {
+        text-align: right;
+        float: left;
+        width: 50%;
+    }
+    @media (max-width: 991.98px) {
+        .left-column, .right-column {
+            text-align: center;
+            width: 100%;
+        }
+    }
 }
 
 // buttons
 .button {
     margin: 5px;
-    padding: 10px 15px;
-    border-radius: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
     background-color: $create-red;
     color: $create-white;
     font-weight: normal;
@@ -227,7 +242,8 @@ footer {
 
 #homepage {
     img {
-        width: 250px;
+        height: 120px;
+        margin: 5px;
     }
     a {
         @extend .button;
@@ -313,7 +329,7 @@ footer {
     width: $desktop-width;
     position: relative;
     min-height: $main-min-height;
-    padding: 5px 30px;
+    padding: 5px 20px;
     @media (max-width: 991.98px) {
         width: $mobile-width!important;
         min-height: $main-min-height!important;
