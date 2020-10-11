@@ -1,15 +1,14 @@
 ---
 ---
 
-## William Tsz Kin Liu
-### B. Media Arts (Hons), UNSW Sydney, 2019
-
-* User Interface (UI) Design, website development
-
 ## Jack Robbers
 ### 2nd Year, B. Electrical Engineering (Hons) / Computer Science, UNSW Sydney
-
 * Content Design, website development
+
+## William Tsz Kin Liu
+### B. Media Arts (Hons), UNSW Sydney, 2019
+* User Interface (UI) Design, website development
+* [Portfolio](https://liutkwilliam.github.io/) 
 
 COLUMN
 

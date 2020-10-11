@@ -22,6 +22,8 @@
 
 COLUMN
 
+![CREATE Vivid 2019]({{site.baseurl}}/images/createunsw-2019-vivid.jpg)
+
 ### Past Projects
 
 * Vivid Sydney Light Installation Projects (Project Illuminate) --> **UNSW Illuminate**
@@ -33,3 +35,5 @@ COLUMN
 [Check out our student club website]({{site.main_website}})
 
 [Stay up-to-date from our Facebook Page](https://www.facebook.com/{{site.facebook_username}})
+
+![CREATE Debbie]({{site.baseurl}}/images/ugv1.jpg)
