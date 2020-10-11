@@ -40,3 +40,5 @@ COLUMN
 * [Octoprint](https://octoprint.org/)
 * [The slides you're looking at right now!](https://github.com/CreateUNSW/github-pages-workshop)
 * [Also checkout the examples from the Jekyll Showcase](https://jekyllrb.com/showcase/)
+
+![CREATE Website]({{site.baseurl}}/images/create-website.png)
