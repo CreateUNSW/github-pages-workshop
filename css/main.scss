@@ -314,10 +314,11 @@ footer {
 
 // custom color for source code option
 .source-code {
-    background-color: $create-yellow;
-    color: $create-black!important;
-    &:hover {
-        background-color: darken($create-yellow, 10%);
+    color: $create-yellow!important;
+    &:after {
+        content: "\f08e";
+        font-family: FontAwesome;
+        padding-left: 5px;
     }
 }
 
@@ -383,14 +384,22 @@ footer {
         } 
     }
 
+    a {
+        font-weight: bold;
+        font-size: 30px;
+        padding: 5px 20px;
+    }
+
     #forward {
         &:before {
-            content: '→';
+            content: '\f105';
+            font-family: FontAwesome;
         }
     }
     #back {
         &:before {
-            content: '←';
+            content: '\f104';
+            font-family: FontAwesome;
         }
     }
 }
