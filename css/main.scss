@@ -15,23 +15,27 @@ $create-black: #212121;
 $create-white: #ffffff;
 
 // Site Palette
-$site-grey: #dbdbdb;
-$site-dark-grey: #999999;
+$site-grey: #f2f2f2;
 $site-alert: #f8d3d4;
 
-// Numerical Variables
-$side-menu: 500px;
+// display variables
 $desktop-width: 100%;
 $mobile-width: auto;
-$min-height: 80vh;
-$min-height-mobile: 70vh;
+$main-min-height: 82vh;
 $img-size: 40%;
+
+// menu variables
+$side-menu: 500px;
+
+//header, logo padding variations
 $logo-height: 65px;
 $logo-height-mobile: 40px;
-$padding-top-bottom: 20.5px;
+$padding-tb: 15px;
+$padding-tb-mobile: $padding-tb / 2;
+$padding-lr: 15px;
 
-// height for the side Navigation Bar
-$sidenav-height: $padding-top-bottom + $logo-height-mobile + $padding-top-bottom;
+// menu in mobile mode
+$menu-height: $padding-tb-mobile + $logo-height-mobile + $padding-tb-mobile;
 
 //////////////
 // General //
@@ -39,8 +43,15 @@ $sidenav-height: $padding-top-bottom + $logo-height-mobile + $padding-top-bottom
 
 body {
     font-family: "Roboto", sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     margin: 0px auto;
+    @media (max-width: 991.98px) {
+        font-size: 18px;
+    }
+}
+
+.fixed-body {
+    overflow-y: hidden;
 }
 
 a {
@@ -54,7 +65,7 @@ a {
 
 // header
 header {
-    background-color: rgba($create-black, 0.1);
+    background-color: $site-grey;
 }
 
 #logos {
@@ -63,15 +74,29 @@ header {
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
     user-select: none;          /* Likely future */
+    @media (max-width: 991.98px) {
+        width: auto;
+    }
     img {
         height: $logo-height;
-        padding: $padding-top-bottom 15px;
+        padding: $padding-tb $padding-lr;
+        @media (max-width: 991.98px) {
+            margin: auto;
+            padding: $padding-tb-mobile $padding-lr;
+            height: $logo-height-mobile;
+        }
     }
 }
 
 .site-title {
-    padding: 20px;
+    margin: auto 0px;
+    padding: 0px $padding-tb;
     width: $desktop-width;
+    @media (max-width: 991.98px) {
+        width: $mobile-width!important;
+        padding: 0px 15px;
+        text-align: center;
+    }
     a {
         text-decoration: none;
         color: $create-black;
@@ -83,16 +108,24 @@ header {
 
 // footer
 footer {
-    padding: 10px 0px;
+    padding: 10px 5px;
+    font-size: smaller;
     text-align: center;
-    background-color: rgba($create-black, 0.1);
+    background-color: $create-black;
+    color: $create-white;
+    a {
+        color: $create-white;
+        &:hover {
+            color: $create-white;
+        }
+    }
 }
 
 // buttons
 .button {
     margin: 5px;
     padding: 10px 15px;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: $create-red;
     color: $create-white;
     font-weight: normal;
@@ -103,6 +136,7 @@ footer {
     user-select: none;          /* Likely future */
     &:hover {
         background-color: darken($create-red, 10%);
+        text-decoration: none;
     }
 }
 
@@ -121,6 +155,9 @@ footer {
         display: table;
         clear: both;
     }
+    @media (max-width: 991.98px) {
+        display: block;
+    }
 }
 
 /////////////////////
@@ -128,18 +165,59 @@ footer {
 ///////////////////
 
 .blank-page-center { // center horizontally and vertically
-    min-height: $min-height;
+    min-height: $main-min-height;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    @media (max-width: 991.98px) {
-        min-height: $min-height-mobile;
-    }
+    padding: 0px 20px;
     .center-content {
         min-height: 350px;
         text-align: center;
+    }
+}
+
+///////////////////
+// Tabs //
+/////////////////
+
+/* Style the tab */
+.tab-container {
+    width: 100%;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .tab {
+        overflow: hidden;
+        background-color: $site-grey;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        button {
+            background-color: inherit;
+            font-size: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            &:hover {
+                background-color: $create-red;
+                color: $create-white;
+            }
+        }
+        .active {
+            background-color: $create-red!important;
+            color: $create-white;
+          }
+    }
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
     }
 }
 
@@ -149,7 +227,7 @@ footer {
 
 #homepage {
     img {
-        width: 300px;
+        width: 250px;
     }
     a {
         @extend .button;
@@ -157,49 +235,65 @@ footer {
     }
 }
 
-
 ///////////////////////
 // Slide Navigation //
 /////////////////////
 
-// menu for desktop
 // side navigation when screen size is smaller than 991.98px
 
 .menu {
     width: $side-menu;
-}
-
-.menu,
-.sidenav {
     background-color: $create-blue;
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
     user-select: none;          /* Likely future */
+    @media (max-width: 991.98px) {
+        display: block;
+        height: calc(100% - #{$menu-height});
+        width: 0px;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        bottom: 0;
+        transition: 0.35s;
+        overflow-y: auto;
+    }
     ul {
         -webkit-font-smoothing: antialiased;
         list-style: none;
         margin: 0;
         padding: 0;
         width: 100%;
+        @media (max-width: 991.98px) {
+            columns: 250px 2;
+        }
         li {
             text-decoration: none;
-            color: $create-white;
             position: relative;
-            &:hover {
-                color: $create-white;
-                background: darken($create-dark-blue, 5%);
-            }
         }
     }
     .link {
         padding: 6.5px 20px;
         text-decoration: none;
         color: $create-white;
+        font-size: smaller;
         font-weight: normal;
         display: block;
         transition: 0.3s;
+        &:hover {
+            color: $create-white;
+            background: darken($create-dark-blue, 5%);
+        }
+        @media (max-width: 991.98px) {
+            padding: 10px 20px;
+        }
     }
+}
+
+// when the current slide is on the current page
+.active {
+    background-color: $create-red!important;
 }
 
 // custom color for source code option
@@ -211,17 +305,6 @@ footer {
     }
 }
 
-// when the current slide is on the current page
-.active {
-    background-color: $create-red!important;
-}
-
-// not showing unless screen size is smaller than 991.98px
-#menu-icon,
-.sidenav {
-    display: none;
-}
-
 ///////////////////
 // Slide Design //
 /////////////////
@@ -229,10 +312,15 @@ footer {
 .main-slide {
     width: $desktop-width;
     position: relative;
-    min-height: $min-height;
-    padding: 0px 20px;
+    min-height: $main-min-height;
+    padding: 5px 30px;
+    @media (max-width: 991.98px) {
+        width: $mobile-width!important;
+        min-height: $main-min-height!important;
+    }
     img {
         width: $img-size;
+        min-width: 200px;
     }
     ul {
         list-style-type: disc;
@@ -240,41 +328,55 @@ footer {
             padding: 2px 0px;
         }
     }
+    .slide-column {
+        min-width: 45%;
+        padding: 0 40px 0 0;
+        @media (max-width: 991.98px) {
+            padding: 0 0% 0 0;
+        }
+    }
+    .slide-column:last-child {
+        padding: 0 0px 0 0; 
+    }
 }
 
 .slide-control {
     position: absolute;
     top: 15px;
-    right: 10px;
+    right: 15px;
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
     user-select: none;          /* Likely future */
+    @media (max-width: 991.98px) {
+        display: block;
+        position: relative;
+        margin: 40px auto;
+        text-align: center;
+        top: 0;
+        right: 0;
+    }
+
     // slide number indicator
     p {
         display:inline-block;
         padding: 0px 10px 0px 0px;
-        
+        @media (max-width: 991.98px) {
+            display: block;
+            padding: 0px 0px 10px 0px;
+        } 
     }
-    // arrow symbols
-    .arrow {
-        border: solid $create-white;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-    }
-      .right {
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-    }
-      .left {
-        transform: rotate(135deg);
-        -webkit-transform: rotate(135deg);
-    }
-}
 
-.slide-column {
-    padding: 0 5% 0 0;
+    #forward {
+        &:before {
+            content: '→';
+        }
+    }
+    #back {
+        &:before {
+            content: '←';
+        }
+    }
 }
 
 //////////////////////////////////
@@ -284,33 +386,31 @@ footer {
 // when screen size is smaller than 991.98px
 @media (max-width: 991.98px) {
     // general setting mobile
-    .row {
-        display: block;
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.17em;
+    }
+    h3 {
+        font-size: 1.1em;
+    }
+    h4 {
+        font-size: 1.05em;
+    }
+    // no changes to h5 & h6
+
+    // for mobile only
+    .show-menu {
+        width: 100%!important;
     }
 
-    // header mobile
-    #logos {
-        width: auto;
-        img {
-            margin: auto;
-            height: $logo-height-mobile;
-        }
-    }
-    .site-title {
-        width: $mobile-width!important;
-        padding: 0px 15px;
-        text-align: center;
-    }
-
-    // mobile slide menu
-    .menu { //hide the desktop left menu
-        display: none;
-    }
+    // mobile menu trigger button
     .menu-icon {
         display: block;
         position: absolute;
-        top: 15px;
-        right: 20px;
+        top: 4px;
+        right: 10px;
         margin: 0px 10px;
         font-size: 30px;
         font-weight: 500;
@@ -324,62 +424,11 @@ footer {
             text-decoration: none;
         }
     }
-    .closebtn {
-        top: 5px;
-        font-size: 50px;
+    .close-button {
+        top: 0px;
+        font-size: 45px;
         &:before {
             content: '\00d7';
-        }
-    }
-
-    // side navigation
-    .sidenav {
-        display: block;
-        height: calc(100% - #{$sidenav-height});
-        width: 0px;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        bottom: 0;
-        transition: 0.35s;
-        overflow-y: auto;
-        .mobile-logo {
-            width: 50%;
-            img { // create logo
-                height: 40px;
-                padding: 20px 15px;
-            }
-        }
-        ul {
-            columns: 200px 2;
-        }
-        .link {
-            font-size: larger;
-            padding: 10px 20px;
-        }
-    }
-    .show-sidenav {
-        width: 100%!important;
-    }
-
-    // slide design mobile
-    .main-slide {
-        width: $mobile-width!important;
-        min-height: $min-height-mobile!important;
-    }
-    .slide-column {
-        padding: 0 0% 0 0;
-    }
-    .slide-control {
-        display: block;
-        position: relative;
-        margin: 40px auto;
-        text-align: center;
-        top: 0;
-        right: 0;
-        p {
-            display: block;
-            padding: 0px 0px 10px 0px;
         }
     }
 }

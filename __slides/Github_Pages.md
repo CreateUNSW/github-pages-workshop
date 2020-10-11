@@ -10,7 +10,7 @@
 * Flexible, can serve from root, a folder, or a branch
 * Has some built-in themes and templates (we won't be using them today though)
 
-### Your Github Account comes with a free domain to host your own website!
+### Your Github Account comes with a free domain to host your own website and website projects!
 
 * Your github website & domain will be **youraccountid.github.io**.
 * For example, the slides you are looking now are hosted under **createunsw.github.io**

@@ -3,32 +3,34 @@ layout: default
 ---
 
 <!--
-    This layout lets you have multiple columns, seperated by the "COLUMN" keyword.
+    This layout lets you have multiple columns, separated by the "COLUMN" keyword.
     See Static_Slides.md for an example
 -->
+{% include header.html %}
 
-<script src="{{ site.baseurl }}/js/slide.js"></script>
-<script src="{{ site.baseurl }}/js/menu.js"></script>
-<a class="menu-icon" id="menu"></a>
-<div class="row">
-    <div class="menu">
-        {% include slide-nav.html %}
-    </div>
-    <div class="sidenav" id="slideMenu">
-                <!-- <a id="closebtn"></a> -->
-        {% include slide-nav.html %}
-    </div>
-    <div class="main-slide">
-        {% assign title = page.slug | replace: "_", " " %}
-        <h1>{{ title }}</h1>
-        {% assign columns = content | split: "COLUMN" %}
-        <div class="row">
-            {% for column in columns %}
-                <div class="slide-column">
-                    {{ column }}
-                </div>
-            {% endfor %}
+    <script src="{{ site.baseurl }}/js/slide.js"></script>
+    <script src="{{ site.baseurl }}/js/menu.js"></script>
+    <div class="row">
+        <div class="menu" id="slideMenu">
+            {% include slide-nav.html %}
         </div>
-        {% include slide-control.html %}
+        <div class="main-slide">
+            {% assign title = page.slug | replace: "_", " " %}
+            <h1>{{ title }}</h1>
+            {% if page.option == "tabs" %}
+                {% include tabs.html %}
+            {% else %}
+                {% assign columns = content | split: "COLUMN" %}
+                <div class="row">
+                    {% for column in columns %}
+                        <div class="slide-column">
+                            {{ column }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% include slide-control.html %}
+        </div>
     </div>
-</div>
+
+{% include footer.html %}
