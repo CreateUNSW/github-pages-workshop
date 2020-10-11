@@ -31,7 +31,7 @@ Supports:
 
 TAB
 
-An example of CSS can be expressed as
+An extracted example of CSS can be expressed as
 
 ``` CSS
 selector {
@@ -42,6 +42,34 @@ selector:other {
     other-property: other-value;
 }
 ```
+
+COLUMN
+
+For example, the links in the side menu navigation can be expressed as
+
+``` CSS
+.link {
+    padding: 6.5px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: smaller;
+    font-weight: normal;
+    display: block;
+    transition: 0.3s;
+}
+
+.link:hover {
+    color: #ffffff;
+    background: #1a237e;
+}
+
+@media (max-width: 991.98px) {
+    .link {
+        padding: 10px 20px;
+    }
+}
+```
+
 TAB
 
 In SASS, previous tab can now be written as
@@ -66,5 +94,30 @@ div {
 
 p {
     color: $site-yellow;
+}
+```
+COLUMN
+
+For example, the links in the side menu navigation can now be expressed as
+
+``` CSS
+$create-dark-blue: #1a237e;
+$create-white: #ffffff;
+
+.link {
+    padding: 6.5px 20px;
+    text-decoration: none;
+    color: $create-white;
+    font-size: smaller;
+    font-weight: normal;
+    display: block;
+    transition: 0.3s;
+    &:hover {
+        color: $create-white;
+        background: darken($create-dark-blue, 5%);
+    }
+    @media (max-width: 991.98px) {
+        padding: 10px 20px;
+    }
 }
 ```

@@ -8,6 +8,10 @@ layout: default
     max-width: 600px;
     text-align: center;
   }
+  img {
+    width: 250px;
+    margin: 20px auto;
+  }
   h1 {
     margin: 30px 0;
     font-size: 4em;
@@ -18,11 +22,12 @@ layout: default
 
 <div class="blank-page-center">
   <div class="container center-content">
+    <img src="{{site.baseurl}}{{site.logo-pos}}">
     <h1>404</h1>
 
-    <p><strong>Page not found :(</strong></p>
-    <p>The requested page could not be found.</p><br>
+    <p><strong>Slide not found :(</strong></p>
+    <p>I am sorry, the slide is missing!</p><br>
   
-    <a href="{{ "/" | prepend: site.baseurl }}" class="button large">Take me back to the homepage</a>
+    <a href="{{ "/" | prepend: site.baseurl }}" class="button large">Take me back to the Slide Homepage</a>
   </div>
 </div>

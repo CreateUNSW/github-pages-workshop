@@ -13,7 +13,14 @@
     <!-- Tab content -->
       {% for tab in tabs %}
         <div id="tab{{ forloop.index }}" class="tabcontent">
-          {{ tab }}
+          {% assign columns = tab | split: "COLUMN" %}
+                <div class="row">
+                    {% for column in columns %}
+                        <div class="slide-column">
+                            {{ column }}
+                        </div>
+                    {% endfor %}
+                </div>
         </div>
       {% endfor %}
   </div>

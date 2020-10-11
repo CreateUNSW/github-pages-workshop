@@ -21,8 +21,25 @@ TAB
 For Example:
 
 ``` HTML
-<h1>Hello</h1> <!-- Header text -->
-<div>
-    <p>Learning how to do HTML</p>
-<div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <!--All other metadata, such as css, javascript, SEO, etc.-->
+</head>
+<body>
+<header>
+  <!--Site Logo or Title, navigations / menus-->
+</header>
+<main> <!--Main Content-->
+  <h1>Hello</h1>
+  <div class="untitled-class">
+      <p>Learning how to do HTML</p>
+  <div>
+<main>
+<footer>
+  <!--Site Copyright, other links, buttons, not important stuff-->
+</footer>
+</body>
+</html>
 ```

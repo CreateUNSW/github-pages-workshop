@@ -21,7 +21,7 @@ $site-alert: #f8d3d4;
 // display variables
 $desktop-width: 100%;
 $mobile-width: auto;
-$main-min-height: 80vh;
+$main-min-height: 82vh;
 $img-size: 40%;
 
 // menu variables
@@ -66,7 +66,6 @@ a {
 // header
 header {
     background-color: $site-grey;
-    position: sticky;
 }
 
 #logos {
@@ -112,7 +111,14 @@ footer {
     padding: 10px 5px;
     font-size: smaller;
     text-align: center;
-    background-color: $site-grey;
+    background-color: $create-black;
+    color: $create-white;
+    a {
+        color: $create-white;
+        &:hover {
+            color: $create-white;
+        }
+    }
 }
 
 // buttons
@@ -264,22 +270,21 @@ footer {
         }
         li {
             text-decoration: none;
-            color: $create-white;
             position: relative;
-            font-size: smaller;
-            &:hover {
-                color: $create-white;
-                background: darken($create-dark-blue, 5%);
-            }
         }
     }
     .link {
         padding: 6.5px 20px;
         text-decoration: none;
         color: $create-white;
+        font-size: smaller;
         font-weight: normal;
         display: block;
         transition: 0.3s;
+        &:hover {
+            color: $create-white;
+            background: darken($create-dark-blue, 5%);
+        }
         @media (max-width: 991.98px) {
             padding: 10px 20px;
         }
@@ -300,11 +305,6 @@ footer {
     }
 }
 
-// not showing unless screen size is smaller than 991.98px
-#menu-icon {
-    display: none;
-}
-
 ///////////////////
 // Slide Design //
 /////////////////
@@ -313,7 +313,7 @@ footer {
     width: $desktop-width;
     position: relative;
     min-height: $main-min-height;
-    padding: 0px 20px;
+    padding: 5px 30px;
     @media (max-width: 991.98px) {
         width: $mobile-width!important;
         min-height: $main-min-height!important;
