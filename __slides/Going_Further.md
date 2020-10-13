@@ -1,12 +1,6 @@
 ---
 ---
 
-## Limitations of Github Pages and Jekyll
-
-* No dynamic sites
-* Jekyll can be restrictive and requires ruby
-* Have to either use CDNs or commit libraries
-
 ## Static sites
 
 * Hosting
@@ -25,10 +19,10 @@
 
 * Other generators
   * [11ty](https://www.11ty.dev/)
-    * Workshop Presenter Jack has been using it for [UNSW iGEM](https://github.com/UNSW-iGEM/wiki-2020)
+    * Jack has been using it for [UNSW iGEM](https://github.com/UNSW-iGEM/wiki-2020)
     * Supports heaps of template languages
     * Not super hard to move to from Jekyll
-    * Can use Javascript to define your own liquid filters
+    * Can use Javascript to define your own liquid filters ❤️❤️
   * Hugo, Gatsby, Wintersmith etc.
 
 COLUMN
@@ -43,7 +37,7 @@ COLUMN
   * Webpack
   * React, Vue
   * Mysql, Mongodb
-* Check out [CSESOC's workshop](https://www.youtube.com/watch?v=e02tDCwcGdE) on this!
+* Check out [CSESOC's workshop](https://www.youtube.com/watch?v=e02tDCwcGdE) on react!
 
 ## UNSW Courses
 

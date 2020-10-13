@@ -1,4 +1,24 @@
 <div class="slide-control">
+
+    {% assign next = '' %}
+    {% assign reversed = site.data.slides | reverse %}
+    {% for slide in reversed %}
+        {% if next == page.slug %}
+            <a class="button" id="back" href="{{ site.baseurl }}/slides/{{slide}}" title="Previous Slide"></a>
+            {% break %}
+        {% endif %}
+    {% assign next = slide %}
+    {% endfor %}
+
+    {% assign prev = '' %}
+        {% for slide in site.data.slides %}
+            {% if prev == page.slug %}
+                <a class="button" id="forward" href="{{ site.baseurl }}/slides/{{slide}}" title="Next Slide"></a>
+                {% break %}
+            {% endif %}
+        {% assign prev = slide %}
+    {% endfor %}
+
     {% assign last = '' %}
     {% assign slideNo = 0 %}
     {% for slide in site.data.slides %}
@@ -8,24 +28,7 @@
         {% assign last = slide %}
         {% assign slideNo = slideNo | plus: 1 %}
     {% endfor %}
-    <p>{{ slideNo }} / {{ site.data.slides.size }}</p>
-
-    {% assign next = '' %}
-    {% assign reversed = site.data.slides | reverse %}
-    {% for slide in reversed %}
-        {% if next == page.slug %}
-            <a class="button" id="back" href="{{ site.baseurl }}/slides/{{slide}}" title="Previous Slide"></a>
-            {% break %}
-        {% endif %}
-        {% assign next = slide %}
-    {% endfor %}
-
-    {% assign prev = '' %}
-    {% for slide in site.data.slides %}
-        {% if prev == page.slug %}
-            <a class="button" id="forward" href="{{ site.baseurl }}/slides/{{slide}}" title="Next Slide"></a>
-            {% break %}
-        {% endif %}
-        {% assign prev = slide %}
-    {% endfor %}
+    <div>
+        <p>{{ slideNo }} / {{ site.data.slides.size }}</p>
+    </div>
 </div>

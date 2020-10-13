@@ -1,34 +1,37 @@
 ---
+
 ---
 
 ## What are we doing today?
 
-### Building a website with:
+### Building a website that has
 
 * a portfolio page
 * a list of your personal projects
 * a blog
 
-### And is
+### and
 
-* easy to maintain
 * looks great
-* hosted for free
+* is easy to maintain
+* is hosted for free
 
 COLUMN
 
 ## Workshop Rundown
 
-### Understand the basics
+### "Theory" - ~30 minutes
 
-* Going through the technologies of making a website
-* About Github Pages
+* The technologies we'll use today
 
-### Live Demo
+### Live Coding - ~1 hour
 
 * Live demonstration of making a simple blog site
-* Some tips
+* Tips to get it right the first time
 
-### Q&As
+### Wrap-up and Q&A - ~15 minutes
 
-**Send us your questions during the workshop and we will response your questions as soon as we can.**
+* A few ways that you can improve your site
+* Resources
+
+**Feel free to send questions in the chat at any time**

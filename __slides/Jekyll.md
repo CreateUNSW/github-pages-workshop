@@ -26,5 +26,3 @@ Jekyll will convert and build each html and markdown files into generated stand-
 `bundle exec jekyll serve`
 
 `bundle exec jekyll build`
-
-

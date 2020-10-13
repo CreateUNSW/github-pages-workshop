@@ -1,17 +1,15 @@
 ---
 ---
 
-Just git. As long as you can add files, commit, and push you'll be fine for this workshop.
+## You will need to know these to get the most out of the workshop:
 
-Lots of content to cover. Basic HTML, CSS, and Javascript has been well covered elsewhere so we'll go through it quickly. Let us know if a basic frontend workshop would be good.
+* HTML Basics (if you know what an element is and how to nest them you’re good), [MDN HTML](https://developer.mozilla.org/.../Introdu.../Getting_started)
+* CSS Basics (if you know what a selector is and how to set properties, you’re good), [MDN CSS](https://developer.mozilla.org/.../Getting.../CSS_basics)
+* Git (if you know how to stage files, commit, and push you’re good to go), [Git Docs](https://guides.github.com/introduction/git-handbook/)
 
-### Download them if you haven't got them installed
 
-### [Git](https://git-scm.com/)
-* Making commits (or push files) to the github or other platform's repositories
+## Download / Setup
 
-### [Ruby](https://www.ruby-lang.org/en/)
-* after installation, jekyll scripting can be used in the working repositories.
-
-### A text editor of your choice
-* We will be using [Microsoft Visual Studio Code](https://code.visualstudio.com/) for this workshop.
+* [Git](https://git-scm.com/), to manage and deploy your code
+* [Ruby](https://www.ruby-lang.org/en/), needed for jekyll
+* A text editor of your choice, we will be using [Microsoft Visual Studio Code](https://code.visualstudio.com/) for this workshop

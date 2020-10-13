@@ -2,37 +2,35 @@
 option: tabs
 tabs:
 - General
-- CSS Example
-- SASS Example
+- Syntax
+- Example
 ---
 
 ## CSS controls how your site looks
 
 * font size, weight, colours
-* text-align
-* floating
-* list
+* layout
 * links and hover styles
 * margins and paddings
-* width and height
+* width and height of elements
 * background (image, colour)
-* box-shadow
+* animations and transitions
 * and more...
 
-Full documentation [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+## SASS is just CSS but better
 
-### SASS is just CSS but better
-
-Use it whenever you can
+Use it whenever you can, it compiles to CSS.
 
 Supports:
 
 * Nested definitions
+* Variables
+* Operations on units and values
+* Mixins
 
 TAB
 
-An extracted example of CSS can be expressed as
-
+## CSS
 ``` CSS
 selector {
     property: value;
@@ -45,7 +43,48 @@ selector:other {
 
 COLUMN
 
-For example, the links in the side menu navigation can be expressed as
+## SASS
+``` CSS
+selector {
+    property: value;
+    other  {
+        other-property: other-value;
+    }
+}
+```
+
+This SASS code will compile to the code on the left.
+
+TAB
+
+The styling for the links on this page looks like:
+
+``` CSS
+$create-dark-blue: #1a237e;
+$create-white: #ffffff;
+$mobile-breakpoint: 991.98px;
+
+.link {
+    padding: 6.5px 20px;
+    text-decoration: none;
+    color: $create-white;
+    font-size: smaller;
+    font-weight: normal;
+    display: block;
+    transition: 0.3s;
+    &:hover {
+        color: $create-white;
+        background: darken($create-dark-blue, 5%);
+    }
+    @media (max-width: $mobile-breakpoint) {
+        padding: 10px 20px;
+    }
+}
+```
+
+COLUMN
+
+Which generates the following CSS:
 
 ``` CSS
 .link {
@@ -60,63 +99,11 @@ For example, the links in the side menu navigation can be expressed as
 
 .link:hover {
     color: #ffffff;
-    background: #1a237e;
+    background: #161d69;
 }
 
 @media (max-width: 991.98px) {
     .link {
-        padding: 10px 20px;
-    }
-}
-```
-
-TAB
-
-In SASS, previous tab can now be written as
-
-``` CSS
-selector {
-    property: value;
-    other  {
-        other-property: other-value;
-    }
-}
-```
-
-Also allows for variables, just don't misspell the variables in the properties or else they will not be read correctly.
-
-``` CSS
-$site-yellow: #f9bf2c;
-
-div {
-    background-color: $site-yellow;
-}
-
-p {
-    color: $site-yellow;
-}
-```
-COLUMN
-
-For example, the links in the side menu navigation can now be expressed as
-
-``` CSS
-$create-dark-blue: #1a237e;
-$create-white: #ffffff;
-
-.link {
-    padding: 6.5px 20px;
-    text-decoration: none;
-    color: $create-white;
-    font-size: smaller;
-    font-weight: normal;
-    display: block;
-    transition: 0.3s;
-    &:hover {
-        color: $create-white;
-        background: darken($create-dark-blue, 5%);
-    }
-    @media (max-width: 991.98px) {
         padding: 10px 20px;
     }
 }

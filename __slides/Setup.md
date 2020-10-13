@@ -1,25 +1,32 @@
 ---
 ---
 
-## How to Set Up
+## Jekyll setup
 
-### Preparations
+1. `mkdir [name].github.io`
+1. `cd [name].github.io`
+1. `gem install bundler`
+1. `bundle init`
+1. `bundle add github-pages`
+1. `bundle exec jekyll new -f .`
+1. `bundle exec jekyll serve`
+1. Now browse to http://localhost:4000
 
-1. You can only run jekyll after installing Ruby.
-2. Run Command Prompt with Ruby
+COLUMN
 
-### Run commands
+## Git setup
 
-1. `gem install bundler jekyll`
+Make a GitHub repo called `[name].github.io`.
 
-2. Navigate to your preferred storage location, command `cd folder` to move to the desired folder
+![Screenshot of repo setup]({{site.baseurl}}/images/repo-setup.png#border)
 
-3. `jekyll new your-new-site`
+Github pages will automatically be enabled for non-project sites
 
-4. `cd your-new-site`
+1. `git init`
+2. `git checkout -b main`
+3. `git add -A`
+4. `git commit`
+5. `git remote add origin git@github.com:[name]/[name].github.io.git`
+6. `git push -u origin main`
 
-5. `bundle exec jekyll serve`
-
-6. Now browse to http://localhost:4000
-
-By this step you will get a simple website with templated content.
+Now your site is live on the web!

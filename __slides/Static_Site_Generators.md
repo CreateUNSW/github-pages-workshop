@@ -1,13 +1,22 @@
 ---
 ---
 
-## Generators
-
-Jekyll, eleventy, Hugo, Gatsby, Wintersmith
-
 ## Why use a generator?
 
+* Quicker to build and maintain than raw HTML
+* More powerful than raw HTML
 * Avoids duplication of code.
+
+## Common generator features:
+
 * Template languages
 * Layouts
-* Avoid writing raw HTML
+* Markdown support
+
+## Common generators:
+
+* **Jekyll**
+* Eleventy
+* Hugo
+* Gatsby
+* Wintersmith

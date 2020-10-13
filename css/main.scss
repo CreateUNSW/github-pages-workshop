@@ -1,5 +1,6 @@
 ---
 ---
+
 ////////////////
 // Variables //
 //////////////
@@ -24,6 +25,8 @@ $mobile-width: auto;
 $main-min-height: 85vh;
 $img-size: 40%;
 
+$mobile-breakpoint: 991.98px;
+
 // menu variables
 $side-menu: 500px;
 
@@ -42,122 +45,123 @@ $menu-height: $padding-tb-mobile + $logo-height-mobile + $padding-tb-mobile;
 ////////////
 
 body {
-    font-family: "Roboto", sans-serif;
-    font-size: 20px;
-    margin: 0px auto;
-    @media (max-width: 991.98px) {
-        font-size: 18px;
-    }
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  margin: 0px auto;
+  @media (max-width: $mobile-breakpoint) {
+    font-size: 18px;
+  }
 }
 
 .fixed-body {
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 a {
-    color: $create-blue;
-    font-weight: bold;
-    text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
+  color: $create-blue;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 // header
 header {
-    background-color: $site-grey;
+  background-color: $site-grey;
 }
 
 #logos {
-    width: $side-menu;
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-    user-select: none;          /* Likely future */
-    @media (max-width: 991.98px) {
-        width: auto;
+  width: $side-menu;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+  @media (max-width: $mobile-breakpoint) {
+    width: auto;
+  }
+  img {
+    height: $logo-height;
+    padding: $padding-tb $padding-lr;
+    @media (max-width: $mobile-breakpoint) {
+      margin: auto;
+      padding: $padding-tb-mobile $padding-lr;
+      height: $logo-height-mobile;
     }
-    img {
-        height: $logo-height;
-        padding: $padding-tb $padding-lr;
-        @media (max-width: 991.98px) {
-            margin: auto;
-            padding: $padding-tb-mobile $padding-lr;
-            height: $logo-height-mobile;
-        }
-    }
+  }
 }
 
 .site-title {
-    margin: auto 0px;
-    padding: 0px $padding-tb;
-    width: $desktop-width;
-    @media (max-width: 991.98px) {
-        width: $mobile-width!important;
-        padding: 0px 15px;
-        text-align: center;
+  margin: auto 0px;
+  padding: 0px $padding-tb;
+  width: $desktop-width;
+  @media (max-width: $mobile-breakpoint) {
+    width: $mobile-width !important;
+    padding: 0px 15px;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color: $create-black;
+    &:hover {
+      color: $create-black;
     }
-    a {
-        text-decoration: none;
-        color: $create-black;
-        &:hover {
-            color: $create-black;
-        }
-    }
+  }
 }
 
 // footer
 footer {
-    padding: 5px 20px;
-    padding-bottom: 24px;
-    font-size: smaller;
-    background-color: $create-black;
+  padding: 5px 20px;
+  padding-bottom: 24px;
+  font-size: smaller;
+  background-color: $create-black;
+  color: $create-white;
+  a {
     color: $create-white;
-    a {
-        color: $create-white;
-        &:hover {
-            color: $create-white;
-        }
+    &:hover {
+      color: $create-white;
     }
-    .left-column {
-        text-align: left;
-        float: left;
-        width: 50%;
-    }
+  }
+  .left-column {
+    text-align: left;
+    float: left;
+    width: 50%;
+  }
+  .right-column {
+    text-align: right;
+    float: left;
+    width: 50%;
+  }
+  @media (max-width: $mobile-breakpoint) {
+    .left-column,
     .right-column {
-        text-align: right;
-        float: left;
-        width: 50%;
+      text-align: center;
+      width: 100%;
     }
-    @media (max-width: 991.98px) {
-        .left-column, .right-column {
-            text-align: center;
-            width: 100%;
-        }
-    }
+  }
 }
 
 // buttons
 .button {
-    margin: 5px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: $create-red;
-    color: $create-white;
-    font-weight: normal;
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: $create-red;
+  color: $create-white;
+  font-weight: normal;
+  text-decoration: none;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+  &:hover {
+    background-color: darken($create-red, 10%);
     text-decoration: none;
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-    user-select: none;          /* Likely future */
-    &:hover {
-        background-color: darken($create-red, 10%);
-        text-decoration: none;
-    }
+  }
 }
 
 .large {
-    font-size: x-large;
+  font-size: x-large;
 }
 
 ///////////////////
@@ -165,33 +169,34 @@ footer {
 /////////////////
 
 .row {
-    display: flex;
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    @media (max-width: 991.98px) {
-        display: block;
-    }
+  display: flex;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @media (max-width: $mobile-breakpoint) {
+    display: block;
+  }
 }
 
 /////////////////////
 // center content //
 ///////////////////
 
-.blank-page-center { // center horizontally and vertically
-    min-height: $main-min-height;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.blank-page-center {
+  // center horizontally and vertically
+  min-height: $main-min-height;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0px 20px;
+  .center-content {
+    min-height: 350px;
     text-align: center;
-    padding: 0px 20px;
-    .center-content {
-        min-height: 350px;
-        text-align: center;
-    }
+  }
 }
 
 ///////////////////
@@ -200,41 +205,41 @@ footer {
 
 /* Style the tab */
 .tab-container {
-    width: 100%;
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
+  width: 100%;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .tab {
+    overflow: hidden;
+    background-color: $site-grey;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    button {
+      background-color: inherit;
+      font-size: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      &:hover {
+        background-color: $create-red;
+        color: $create-white;
+      }
     }
-    .tab {
-        overflow: hidden;
-        background-color: $site-grey;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        button {
-            background-color: inherit;
-            font-size: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            &:hover {
-                background-color: $create-red;
-                color: $create-white;
-            }
-        }
-        .active {
-            background-color: $create-red!important;
-            color: $create-white;
-          }
+    .active {
+      background-color: $create-red !important;
+      color: $create-white;
     }
-    .tabcontent {
-        display: none;
-        padding: 6px 12px;
-    }
+  }
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+  }
 }
 
 ///////////////////
@@ -242,85 +247,85 @@ footer {
 /////////////////
 
 #homepage {
-    img {
-        height: 120px;
-        margin: 5px;
-    }
-    a {
-        @extend .button;
-        @extend .large; 
-    }
+  img {
+    height: 120px;
+    margin: 5px;
+  }
+  a {
+    @extend .button;
+    @extend .large;
+  }
 }
 
 ///////////////////////
 // Slide Navigation //
 /////////////////////
 
-// side navigation when screen size is smaller than 991.98px
+// side navigation when screen size is smaller than $mobile-breakpoint
 
 .menu {
-    width: $side-menu;
-    background-color: $create-blue;
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-    user-select: none;          /* Likely future */
-    @media (max-width: 991.98px) {
-        display: block;
-        height: calc(100% - #{$menu-height});
-        width: 0px;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        bottom: 0;
-        transition: 0.35s;
-        overflow-y: auto;
+  width: $side-menu;
+  background-color: $create-blue;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+  @media (max-width: $mobile-breakpoint) {
+    display: block;
+    height: calc(100% - #{$menu-height});
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    transition: 0.35s;
+    overflow-y: auto;
+  }
+  ul {
+    -webkit-font-smoothing: antialiased;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    @media (max-width: $mobile-breakpoint) {
+      columns: 250px 2;
     }
-    ul {
-        -webkit-font-smoothing: antialiased;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        @media (max-width: 991.98px) {
-            columns: 250px 2;
-        }
-        li {
-            text-decoration: none;
-            position: relative;
-        }
+    li {
+      text-decoration: none;
+      position: relative;
     }
-    .link {
-        padding: 6.5px 20px;
-        text-decoration: none;
-        color: $create-white;
-        font-size: smaller;
-        font-weight: normal;
-        display: block;
-        transition: 0.3s;
-        &:hover {
-            color: $create-white;
-            background: darken($create-dark-blue, 5%);
-        }
-        @media (max-width: 991.98px) {
-            padding: 10px 20px;
-        }
+  }
+  .link {
+    padding: 6.5px 20px;
+    text-decoration: none;
+    color: $create-white;
+    font-size: smaller;
+    font-weight: normal;
+    display: block;
+    transition: 0.3s;
+    &:hover {
+      color: $create-white;
+      background: darken($create-dark-blue, 5%);
     }
+    @media (max-width: $mobile-breakpoint) {
+      padding: 10px 20px;
+    }
+  }
 }
 
 // when the current slide is on the current page
 .active {
-    background-color: $create-red!important;
+  background-color: $create-red !important;
 }
 
 // custom color for source code option
 .source-code {
-    color: $create-yellow!important;
-    &:after {
-        content: "\f08e";
-        font-family: FontAwesome;
-        padding-left: 5px;
-    }
+  color: $create-yellow !important;
+  &:after {
+    content: "\f08e";
+    font-family: FontAwesome;
+    padding-left: 5px;
+  }
 }
 
 ///////////////////
@@ -328,134 +333,147 @@ footer {
 /////////////////
 
 .main-slide {
-    width: $desktop-width;
-    position: relative;
-    min-height: $main-min-height;
-    padding: 0px 20px;
-    padding-bottom: 5px;
-    @media (max-width: 991.98px) {
-        width: $mobile-width!important;
-        min-height: $main-min-height!important;
+  width: $desktop-width;
+  position: relative;
+  min-height: $main-min-height;
+  padding: 0px 20px;
+  padding-bottom: 5px;
+  @media (max-width: $mobile-breakpoint) {
+    width: $mobile-width !important;
+    min-height: $main-min-height !important;
+  }
+  img {
+    width: $img-size;
+    min-width: 200px;
+  }
+  ul {
+    list-style-type: disc;
+    li {
+      padding: 2px 0px;
+      img {
+        display: block;
+      }
     }
+  }
+  .slide-column {
+    min-width: 45%;
+    padding: 0 40px 0 0;
     img {
-        width: $img-size;
-        min-width: 200px;
+      width: 90%;
     }
-    ul {
-        list-style-type: disc;
-        li {
-            padding: 2px 0px;
-        }
+    @media (max-width: $mobile-breakpoint) {
+      padding: 0 0% 0 0;
     }
-    .slide-column {
-        min-width: 45%;
-        padding: 0 40px 0 0;
-        @media (max-width: 991.98px) {
-            padding: 0 0% 0 0;
-        }
-    }
-    .slide-column:last-child {
-        padding: 0 0px 0 0; 
-    }
+  }
+  .slide-column:last-child {
+    padding: 0 0px 0 0;
+  }
 }
 
 .slide-control {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-    user-select: none;          /* Likely future */
-    @media (max-width: 991.98px) {
-        display: block;
-        position: relative;
-        margin: 40px auto;
-        text-align: center;
-        top: 0;
-        right: 0;
-    }
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+  @media (max-width: $mobile-breakpoint) {
+    display: block;
+    position: relative;
+    margin: 40px auto;
+    text-align: center;
+    top: 0;
+    right: 0;
+  }
 
-    // slide number indicator
-    p {
-        display:inline-block;
-        padding: 0px 10px 0px 0px;
-        @media (max-width: 991.98px) {
-            display: block;
-            padding: 0px 0px 10px 0px;
-        } 
-    }
+  text-align: center;
 
-    a {
-        font-weight: bold;
-        font-size: 30px;
-        padding: 5px 20px;
+  // slide number indicator
+  p {
+    display: inline-block;
+    padding: 0px 10px 0px 0px;
+    @media (max-width: $mobile-breakpoint) {
+      display: block;
+      padding: 0px 0px 10px 0px;
     }
+  }
 
-    #forward {
-        &:before {
-            content: '\f105';
-            font-family: FontAwesome;
-        }
+  a {
+    font-weight: bold;
+    font-size: 30px;
+    padding: 5px 20px;
+  }
+
+  #forward {
+    &:before {
+      content: "\f105";
+      font-family: FontAwesome;
     }
-    #back {
-        &:before {
-            content: '\f104';
-            font-family: FontAwesome;
-        }
+  }
+  #back {
+    &:before {
+      content: "\f104";
+      font-family: FontAwesome;
     }
+  }
 }
 
 //////////////////////////////////
 // Responsive Design on Mobile //
 ////////////////////////////////
 
-// when screen size is smaller than 991.98px
-@media (max-width: 991.98px) {
-    // general setting mobile
-    h1 {
-        font-size: 1.5em;
-    }
-    h2 {
-        font-size: 1.17em;
-    }
-    h3 {
-        font-size: 1.1em;
-    }
-    h4 {
-        font-size: 1.05em;
-    }
-    // no changes to h5 & h6
+// when screen size is smaller than $mobile-width
+@media (max-width: $mobile-breakpoint) {
+  // general setting mobile
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.17em;
+  }
+  h3 {
+    font-size: 1.1em;
+  }
+  h4 {
+    font-size: 1.05em;
+  }
+  // no changes to h5 & h6
 
-    // for mobile only
-    .show-menu {
-        width: 100%!important;
-    }
+  // for mobile only
+  .show-menu {
+    width: 100% !important;
+  }
 
-    // mobile menu trigger button
-    .menu-icon {
-        display: block;
-        position: absolute;
-        top: 4px;
-        right: 10px;
-        margin: 0px 10px;
-        font-size: 30px;
-        font-weight: 500;
-        cursor: pointer;
-        color: $create-black;
-        &:before {
-            content: '☰';
-        }
-        &:hover{
-            color: $create-red;
-            text-decoration: none;
-        }
+  // mobile menu trigger button
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    margin: 0px 10px;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    color: $create-black;
+    &:before {
+      content: "☰";
     }
-    .close-button {
-        top: 0px;
-        font-size: 45px;
-        &:before {
-            content: '\00d7';
-        }
+    &:hover {
+      color: $create-red;
+      text-decoration: none;
     }
+  }
+  .close-button {
+    top: 0px;
+    font-size: 45px;
+    &:before {
+      content: "\00d7";
+    }
+  }
+}
+
+// add a border to images that specify it
+img[src*="#border"] {
+  border: $create-red solid 2px;
 }
