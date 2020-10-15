@@ -14,6 +14,8 @@ image: /images/workshop-bg.jpg
 
 **Send us your questions during the workshop and we will response your questions as soon as we can.**
 
+Link to recording: [https://www.youtube.com/watch?v=MlfFTkUJotU](https://www.youtube.com/watch?v=MlfFTkUJotU)
+
 <br>
 
 [Workshop Slides]({{ site.baseurl }}/slides/Introduction)
