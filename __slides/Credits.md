@@ -16,6 +16,8 @@ COLUMN
 
 We will share the live-stream to our Official YouTube Channel. And a link will be provided here in due course.
 
+Link to recording: [https://www.youtube.com/watch?v=MlfFTkUJotU](https://www.youtube.com/watch?v=MlfFTkUJotU)
+
 <br>
 
 ## Contact Us
