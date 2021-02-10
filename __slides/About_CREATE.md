@@ -13,14 +13,15 @@
 * Workshops
   * Arduino & Basics of Electronics
   * CAD
-  * This one (how to make a personal website)
+  * This one
 * Projects
 * Outreach (High School and Public Events)
 * Sales Stall
 
 ## Getting involved:
 
-* We'll be recruiting new executives, directors, and subcommittee members in early 2021.
+* We have an AGM in Week 3! Details will be released soon
+* Join the club through sparc
 * Want advice on a project? Ask in our facebook group or discord.
 
 COLUMN
@@ -31,6 +32,7 @@ COLUMN
 * Vivid Sydney Light Installation Projects (Project Illuminate) --> **UNSW Illuminate**
   * [2019: Celestial Pancake](https://www.createunsw.com.au/projects/pi-celestial-pancake/) ![CREATE Vivid 2019]({{site.baseurl}}/images/createunsw-2019-vivid.jpg)
 * Droid Racing Challenge (DRC)
+* Sumobots
 * Unmanned Aerial Systems (UAS) --> **Flight Labs UNSW**
 * Unmanned ground vehicle, also known as "Debbie" ![CREATE Debbie]({{site.baseurl}}/images/ugv1.jpg)
 

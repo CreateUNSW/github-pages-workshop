@@ -24,7 +24,7 @@ COLUMN
 
 * The technologies we'll use today
 
-### Live Coding - ~1 hour
+### Live Coding - ~2 hours
 
 * Live demonstration of making a simple blog site
 * Tips to get it right the first time

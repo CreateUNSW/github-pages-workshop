@@ -2,8 +2,7 @@
 ---
 
 ## Jack Robbers
-### 2nd Year, B. Electrical Engineering (Hons) / Computer Science, UNSW Sydney
-* Content Design, website development
+* Content Design, website development, delivery
 
 ## William Tsz Kin Liu
 ### B. Media Arts (Hons), UNSW Sydney, 2019
@@ -14,7 +13,7 @@ COLUMN
 
 ## Watch the recap?
 
-We will share the live-stream to our Official YouTube Channel. And a link will be provided here in due course.
+Recording of the workshop held in 20T3W5
 
 Link to recording: [https://www.youtube.com/watch?v=MlfFTkUJotU](https://www.youtube.com/watch?v=MlfFTkUJotU)
 

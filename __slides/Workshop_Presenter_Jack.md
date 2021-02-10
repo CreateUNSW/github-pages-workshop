@@ -1,11 +1,10 @@
 ---
 ---
 
-## Jack Robbers
-* Pronouns: he/him
-* 2nd Year Electrical Engineering / Computer Science
+## Jack Robbers (he/him)
+* 3rd Year Electrical Engineering / Computer Science
 * Work at a company doing full stack web development
-* I'm on of the Sales Directors for CREATE this year
+* I'm was a Sales Directors for CREATE in 2020
 
 COLUMN
 

@@ -12,7 +12,7 @@ image: /images/workshop-bg.jpg
 ## Wednesday 10th February
 ## 4pm - 7pm Sydney Time
 
-Recording of previous workshop (20T3 Week 5 5-7pm): [https://www.youtube.com/watch?v=MlfFTkUJotU](https://www.youtube.com/watch?v=MlfFTkUJotU)
+[Recording of previous workshop (20T3 Week 5 5-7pm)](https://www.youtube.com/watch?v=MlfFTkUJotU)
 
 <br>
 
