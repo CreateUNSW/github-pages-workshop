@@ -48,5 +48,4 @@ COLUMN
 
 ### School of Art & Design
 
-* SDES3174 - understand website structure, aesthetics and teaches how to build a basic website with HTML, CSS, Javascript
-* Undergraduate Design Disciplinary Studios - Interaction
+* SDES3174 Digital Design: Introduction to Web Design - understand website structure, aesthetics and teaches how to build a basic website with HTML, CSS, Javascript
