@@ -8,13 +8,11 @@ image: /images/workshop-bg.jpg
 
 # Making a Personal Site from scratch with Github Pages
 
-## Term 3 Week 5
-## Wednesday 14th October 2020
-## 5pm - 7pm Sydney Time
+## Term 1 O-Week 2021
+## Wednesday 10th February
+## 4pm - 7pm Sydney Time
 
-**Send us your questions during the workshop and we will response your questions as soon as we can.**
-
-Link to recording: [https://www.youtube.com/watch?v=MlfFTkUJotU](https://www.youtube.com/watch?v=MlfFTkUJotU)
+Recording of previous workshop (20T3 Week 5 5-7pm): [https://www.youtube.com/watch?v=MlfFTkUJotU](https://www.youtube.com/watch?v=MlfFTkUJotU)
 
 <br>
 
